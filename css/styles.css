@@ -135,3 +135,20 @@
       margin-right: 20px;
       margin-bottom: 10px;
     }
+
+    footer {
+      display: flex;
+      justify-content: center;    /* Centra el contenido horizontalmente */
+      align-items: center;        /* Centra el contenido verticalmente */
+      padding: 20px;
+      background-color: #ffffff;     /* Color de fondo oscuro */
+      color: #333;               /* Color de texto */
+      text-align: center;
+      flex-wrap: wrap;            /* Permite que el contenido se adapte si es necesario */
+    }
+
+    .footer-content {
+      width: 100%;
+      max-width: 1200px;          /* Ancho máximo para pantallas grandes */
+      padding: 0 20px;            /* Espaciado lateral para dispositivos móviles */
+    }

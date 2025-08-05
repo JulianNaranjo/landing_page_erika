@@ -1,4 +1,4 @@
-body {
+    body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       background: #ffffff;
@@ -23,7 +23,7 @@ body {
     }
 
     header {
-      background: #e0f7f4;
+      background: #b6e8e2;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -90,6 +90,10 @@ body {
       padding-left: 1.2rem;
     }
 
+    ul li {
+      margin-bottom: 10px; /* Ajusta este valor para cambiar el espacio entre elementos */
+    }
+
     ul li::marker {
       color: #EEBAAC;
     }
@@ -120,4 +124,18 @@ body {
       header img.hero-img {
         margin-top: 1em;
       }
+    }
+
+    .img-circular {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+
+    .footer-content {
+      text-align: center;
     }

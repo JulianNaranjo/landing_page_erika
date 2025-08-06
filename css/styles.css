@@ -5,22 +5,41 @@
       color: #333;
     }
 
-    nav {
-      background: #f7f7f7;
-      padding: 1rem;
-      text-align: center;
-    }
+nav.nav-con-logo {
+  background: #f7f7f7;
+  height: 50px;
+  padding: 0.1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      color: #00b39b;
-    }
+.logo-container {
+  flex: 0.3;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+.logo-nav {
+  height: 80px; /* ajusta según necesidad */
+  vertical-align: middle;
+}
+
+.nav-links {
+  flex: 2;
+  text-align: center;
+  transform: translateY(-25px);
+}
+
+.nav-links a {
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #00b39b;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
 
     header {
       background: #b6e8e2;
@@ -37,7 +56,7 @@
     }
 
     .hero-text {
-      max-width: 600px;
+      max-width: 800px;
     }
 
     .hero-text h1 {
@@ -152,3 +171,152 @@
       max-width: 1200px;          /* Ancho máximo para pantallas grandes */
       padding: 0 20px;            /* Espaciado lateral para dispositivos móviles */
     }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background: #b6e8e2;
+      padding: 2rem;
+      flex-wrap: wrap;
+    }
+
+    /* Columna izquierda con foto */
+    .col-izquierda {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      margin-right: 2rem;
+    }
+
+    /* Logo pequeño */
+    .logo {
+      width: 100px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    /* Foto cuadrada */
+    .foto-cuadrada {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* Columna derecha con texto */
+    .col-derecha {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    /* Estilo del título */
+    .col-derecha h1 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+    }
+
+    /* Estilo del párrafo */
+    .col-derecha p {
+      font-size: 1.1em;
+      margin-bottom: 1em;
+    }
+
+    /* Botón estilo WhatsApp header */
+    .btn-header {
+      display: inline-block;
+      background: rgba(0, 179, 155, 0.9);
+      color: white;
+      padding: 0.8em 1.2em;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+/*////////////////////*/
+header {
+  background-color: #b6e8e2;
+  padding: 2rem;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Logo en la parte superior izquierda */
+.logo-container {
+  margin-bottom: 1.5rem;
+}
+
+.logo-img {
+  width: 120px;
+  height: auto;
+  align-items: left;
+}
+
+/* Fila con la foto y el texto */
+.content-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Foto cuadrada */
+.foto-cuadrada {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Texto */
+.texto-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.texto-hero p {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .content-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .foto-cuadrada {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 1rem;
+  }
+
+  .texto-hero {
+    max-width: 90%;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logo-img {
+    width: 70px;
+  }
+
+  .btn {
+    margin-top: 1rem;
+    align-self: center;
+    font-size: 1rem;
+    padding: 0.7em 1.1em;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+}

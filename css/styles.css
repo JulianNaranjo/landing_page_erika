@@ -799,7 +799,11 @@ footer {
   
   .nav-links {
     display: block;
-    font-size: 14px;
+    font-size: 12px;
+  }
+  
+  .nav-links a {
+    padding: 6px 10px; /* Ajusta para reducir el espacio entre links */
   }
   
   .logo-nav {

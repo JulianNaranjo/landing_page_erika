@@ -662,7 +662,10 @@
               </svg>
             </div>
             <blockquote class="testimonial-text">
-              "Excelentes asesorias y talleres. Gracias a su guia y consejos, mi esposa y yo somos padres con muchas mas herramientas que antes eran desconocidas, y ver el hermoso efecto en nuestro hijo hace que todo valga la pena. Gracias Erika!"
+              "Excelentes asesorias y talleres. Gracias a su guia y consejos, mi
+              esposa y yo somos padres con muchas mas herramientas que antes
+              eran desconocidas, y ver el hermoso efecto en nuestro hijo hace
+              que todo valga la pena. Gracias Erika!"
             </blockquote>
             <footer class="testimonial-author">
               <div
@@ -737,7 +740,10 @@
               </svg>
             </div>
             <blockquote class="testimonial-text">
-              "Durante nuestro proceso familiar con Erika nos sentimos súper bien acompañados y nos gustó mucho el trato amable y empático. Nos brindó muchas herramientas para el trabajo el casa y nos explicó súper bien como manejarlas para diferentes situaciones."
+              "Durante nuestro proceso familiar con Erika nos sentimos súper
+              bien acompañados y nos gustó mucho el trato amable y empático. Nos
+              brindó muchas herramientas para el trabajo el casa y nos explicó
+              súper bien como manejarlas para diferentes situaciones."
             </blockquote>
             <footer class="testimonial-author">
               <div
@@ -748,7 +754,9 @@
               </div>
               <div class="testimonial-info">
                 <cite class="testimonial-name">Ana P.</cite>
-                <span class="testimonial-role">Evaluación neuropsicológica</span>
+                <span class="testimonial-role"
+                  >Evaluación neuropsicológica</span
+                >
               </div>
             </footer>
           </article>
@@ -812,7 +820,8 @@
               </svg>
             </div>
             <blockquote class="testimonial-text">
-              "Excelente profesional. Empática, clara y muy comprometida. La recomiendo con total confianza."
+              "Excelente profesional. Empática, clara y muy comprometida. La
+              recomiendo con total confianza."
             </blockquote>
             <footer class="testimonial-author">
               <div
@@ -823,13 +832,24 @@
               </div>
               <div class="testimonial-info">
                 <cite class="testimonial-name">Juan O.</cite>
-                <span class="testimonial-role">Evaluación neuropsicológica</span>
+                <span class="testimonial-role"
+                  >Evaluación neuropsicológica</span
+                >
               </div>
             </footer>
           </article>
         </div>
-        <div class="testimonials-footer" style="text-align: center; margin-top: var(--space-8);">
-          <a href="https://share.google/r3A678eBnU350hlRK" class="text-secondary" style="text-decoration: underline;" target="_blank" rel="noopener noreferrer">
+        <div
+          class="testimonials-footer"
+          style="text-align: center; margin-top: var(--space-8)"
+        >
+          <a
+            href="https://share.google/r3A678eBnU350hlRK"
+            class="text-secondary"
+            style="text-decoration: underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Ver en Google Reviews
           </a>
         </div>
@@ -1215,34 +1235,46 @@
       const menuBtn = document.querySelector(".mobile-menu-btn");
       const navLinks = document.querySelector(".nav-links");
       const overlay = document.querySelector(".mobile-nav-overlay");
+      const navbar = document.getElementById("navbar");
 
-      menuBtn.addEventListener("click", () => {
-        const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
-        menuBtn.setAttribute("aria-expanded", !isExpanded);
-        navLinks.classList.toggle("active");
-        overlay.classList.toggle("active");
-        document.body.style.overflow = isExpanded ? "" : "hidden";
-      });
+      function openMenu() {
+        // First remove glass effect from navbar
+        navbar.classList.add("menu-open");
 
-      overlay.addEventListener("click", () => {
+        // Wait 50ms for CSS changes to apply before showing menu
+        setTimeout(() => {
+          menuBtn.setAttribute("aria-expanded", "true");
+          navLinks.classList.add("active");
+          overlay.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }, 50);
+      }
+
+      function closeMenu() {
         menuBtn.setAttribute("aria-expanded", "false");
         navLinks.classList.remove("active");
         overlay.classList.remove("active");
         document.body.style.overflow = "";
+        navbar.classList.remove("menu-open");
+      }
+
+      menuBtn.addEventListener("click", () => {
+        const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+        if (isExpanded) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
       });
+
+      overlay.addEventListener("click", closeMenu);
 
       // Close menu on link click
       document.querySelectorAll(".nav-links a").forEach((link) => {
-        link.addEventListener("click", () => {
-          menuBtn.setAttribute("aria-expanded", "false");
-          navLinks.classList.remove("active");
-          overlay.classList.remove("active");
-          document.body.style.overflow = "";
-        });
+        link.addEventListener("click", closeMenu);
       });
 
       // Navbar scroll effect
-      const navbar = document.getElementById("navbar");
       window.addEventListener("scroll", () => {
         if (window.scrollY > 50) {
           navbar.classList.add("nav-scrolled");

@@ -1,147 +1,609 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servicios de Neuropsicología y Psicología | Erika Lotero</title>
-  <meta name="description" content="Servicios especializados en evaluación neuropsicológica, diagnóstico de autismo y crianza positiva en Sabaneta, Envigado y Medellín. Psicología clínica para todas las edades.">
-  <meta name="keywords" content="evaluación neuropsicológica, diagnóstico autismo, crianza positiva, psicología infantil, psicología adultos, neuropsicología, Sabaneta, Envigado, Medellín" />
-  <meta name="author" content="Erika Lotero" />
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="Spanish">
-  <meta name="geo.region" content="CO-ANT">
-  <meta name="geo.placename" content="Sabaneta, Antioquia">
-  <meta name="geo.position" content="6.1505;-75.6153">
-  <meta name="ICBM" content="6.1505, -75.6153">
-  <link rel="canonical" href="https://www.erikaloteroneuro.com/servicios">
-  <meta property="og:title" content="Servicios de Neuropsicología y Psicología | Erika Lotero">
-  <meta property="og:description" content="Servicios especializados en evaluación neuropsicológica, diagnóstico de autismo y crianza positiva en Sabaneta, Envigado y Medellín.">
-  <meta property="og:image" content="https://www.erikaloteroneuro.com/assets/images/logo-iso-sin-fondo.png">
-  <meta property="og:url" content="https://www.erikaloteroneuro.com/servicios">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Servicios de Neuropsicología y Psicología | Erika Lotero">
-  <meta name="twitter:description" content="Servicios especializados en evaluación neuropsicológica, diagnóstico de autismo y crianza positiva en Sabaneta, Envigado y Medellín.">
-  <meta name="twitter:image" content="https://www.erikaloteroneuro.com/assets/images/logo-iso-sin-fondo.png">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-</head>
-<body>
-  <nav class="nav-con-logo">
-    <div class="logo-container">
-      <img src="assets/images/logo-iso-sin-fondo.png" alt="Logo" class="logo-nav">
-    </div>
-    <div class="nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="servicios.html" class="active">Servicios</a>
-      <a href="blog.html">Blog</a>
-      <a href="index.html#sobre">Sobre mí</a>
-      <a href="index.html#contacto">Contacto</a>
-    </div>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios de Neuropsicología y Psicología | Erika Lotero</title>
+    <meta
+      name="description"
+      content="Servicios especializados en evaluación neuropsicológica, diagnóstico de autismo y crianza positiva en Sabaneta, Envigado y Medellín. Psicología clínica para todas las edades."
+    />
+    <meta
+      name="keywords"
+      content="evaluación neuropsicológica, diagnóstico autismo, crianza positiva, psicología infantil, psicología adultos, neuropsicología, Sabaneta, Envigado, Medellín"
+    />
+    <meta name="author" content="Erika Lotero" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Spanish" />
+    <meta name="geo.region" content="CO-ANT" />
+    <meta name="geo.placename" content="Sabaneta, Antioquia" />
+    <meta name="geo.position" content="6.1505;-75.6153" />
+    <meta name="ICBM" content="6.1505, -75.6153" />
+    <link
+      rel="canonical"
+      href="https://www.erikaloteroneuro.com/servicios.html"
+    />
+    <meta
+      property="og:title"
+      content="Servicios de Neuropsicología y Psicología | Erika Lotero"
+    />
+    <meta
+      property="og:description"
+      content="Servicios especializados en evaluación neuropsicológica, diagnóstico de autismo y crianza positiva en Sabaneta, Envigado y Medellín."
+    />
+    <meta
+      property="og:image"
+      content="https://www.erikaloteroneuro.com/assets/images/logo-iso-sin-fondo.png"
+    />
+    <meta
+      property="og:url"
+      content="https://www.erikaloteroneuro.com/servicios.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Servicios de Neuropsicología y Psicología | Erika Lotero"
+    />
+    <meta
+      name="twitter:description"
+      content="Servicios especializados en evaluación neuropsicológica, diagnóstico de autismo y crianza positiva en Sabaneta, Envigado y Medellín."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.erikaloteroneuro.com/assets/images/logo-iso-sin-fondo.png"
+    />
+    <link rel="stylesheet" href="css/design-system.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-  <header class="services-header">
-    <div class="header-wrapper">
-      <h1>Nuestros Servicios</h1>
-      <p>Especialistas en neuropsicología, diagnóstico de autismo y crianza positiva</p>
-    </div>
-  </header>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://www.erikaloteroneuro.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Servicios",
+            "item": "https://www.erikaloteroneuro.com/servicios.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-  <main class="services-container">
-    <section class="service-card">
-      <div class="service-icon">🧠</div>
-      <h2>Evaluación Neuropsicológica</h2>
-      <p class="service-description">
-        Evaluaciones completas y especializadas para niños y adultos que presentan alteraciones en el desarrollo,
-        problemas de aprendizaje, déficit de atención, hiperactividad, alteraciones del lenguaje,
-        problemas comportamentales y dificultades en la socialización.
-      </p>
-      <div class="service-details">
-        <h3>¿Qué incluye?</h3>
-        <ul>
-          <li>Entrevista inicial e historia clínica</li>  
-          <li>Evaluación integral de funciones cognitivas: atención y concentración, memoria y aprendizaje, percepción, habilidades visoespaciales, lenguaje, funciones ejecutivas, etc.</li>
-          <li>Informe detallado con recomendaciones</li>
-          <li>Seguimiento y plan de intervención</li>
-        </ul>
-        <div class="service-cta">
-          <a href="evaluacion-neuropsicologica.html" class="btn-service">
-            Conocer más sobre Evaluación Neuropsicológica
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="service-card">
-      <div class="service-icon">🌟</div>
-      <h2>Diagnóstico de Autismo</h2>
-      <p class="service-description">
-        Diagnóstico especializado y temprano del trastorno del espectro autista (TEA) utilizando
-        herramientas validadas internacionalmente.
-      </p>
-      <div class="service-details">
-        <h3>Proceso de diagnóstico:</h3>
-        <ul>
-          <li>Evaluación inicial y entrevista familiar</li>
-          <li>Aplicación de escalas de evaluación estandarizadas</li>
-          <li>Observación conductual estructurada</li>
-          <li>Evaluación de comunicación y socialización</li>
-          <li>Informe diagnóstico completo</li>
-          <li>Orientación familiar y plan de intervención</li>
-        </ul>
-        <div class="service-cta">
-          <a href="diagnostico-autismo.html" class="btn-service">
-            Conocer más sobre Diagnóstico de Autismo
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="service-card">
-      <div class="service-icon">👨‍👩‍👧‍👦</div>
-      <h2>Crianza Positiva</h2>
-      <p class="service-description">
-        Programas de formación y asesoría para padres y familias que buscan herramientas efectivas
-        para el proceso de crianza, basados en disciplina positiva y psicología del desarrollo.
-      </p>
-      <div class="service-details">
-        <h3>Nuestros programas:</h3>
-        <ul>
-          <li>Talleres de disciplina positiva</li>
-          <li>Asesoría individual familiar</li>
-          <li>Manejo de conductas desafiantes</li>
-          <li>Comunicación efectiva con niños</li>
-          <li>Desarrollo de límites saludables</li>
-          <li>Apoyo en crisis familiares</li>
-        </ul>
-        <div class="service-cta">
-          <a href="crianza-positiva.html" class="btn-service">
-            Conocer más sobre Crianza Positiva
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <section class="cta-section">
-    <div class="cta-content">
-      <h2>¿Necesitas orientación?</h2>
-      <p>No dudes en contactarnos para resolver tus dudas o agendar una consulta</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/573003793080" class="btn-primary" target="_blank">
-          Agendar por WhatsApp
+    <nav
+      class="nav"
+      id="navbar"
+      role="navigation"
+      aria-label="Navegación principal"
+    >
+      <div class="nav-inner">
+        <a
+          href="index.html"
+          class="nav-logo"
+          aria-label="Inicio - Erika Lotero"
+        >
+          <img
+            src="assets/images/logo-iso-sin-fondo.png"
+            alt="Logo Erika Lotero Neuropsicología"
+            width="512"
+            height="512"
+          />
         </a>
-        <a href="mailto:neuropsicologiaycrianza@gmail.com" class="btn-secondary">
-          Email
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 <strong>Erika Lotero Neuro</strong>. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-</body>
+        <button
+          class="mobile-menú-btn"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="nav-menú"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="mobile-nav-overlay" aria-hidden="true"></div>
+
+        <div class="nav-links" id="nav-menú">
+          <a href="index.html" class="nav-link">Inicio</a>
+          <a href="servicios.html" class="nav-link active" aria-current="page"
+            >Servicios</a
+          >
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="index.html#sobre" class="nav-link">Sobre mí</a>
+          <a href="index.html#contacto" class="nav-link">Contacto</a>
+          <div class="nav-cta">
+            <a
+              href="https://wa.me/573003793080"
+              class="btn btn-primary btn-sm"
+              target="_blank"
+              rel="noopener noreferrer"
+              >WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero services-page-hero" id="main-content">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-pattern"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="badge badge-glass reveal">
+              <span>19 años de experiencia</span>
+            </div>
+            <h1 class="reveal stagger-1">
+              Servicios especializados para niños, adolescentes y adultos
+            </h1>
+            <p class="lead reveal stagger-2">
+              Evaluación neuropsicológica, diagnóstico de autismo y crianza
+              positiva con enfoque clínico , humano y orientado a resultados para
+              tu familia.
+            </p>
+            <div class="hero-cta reveal stagger-3">
+              <a
+                href="https://wa.me/573003793080"
+                class="btn btn-primary btn-lg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Agendar valoración</a
+              >
+              <a href="#faq" class="btn btn-secondary btn-lg">Resolver dudas</a>
+            </div>
+            <p class="services-hero-note reveal stagger-3">
+              Atención en Sabaneta para familias de Medellín, Envigado y
+              municipios cercanos.
+            </p>
+          </div>
+
+          <div class="hero-image-wrapper reveal">
+            <div class="hero-image-frame">
+              <img
+                src="assets/images/sobre_mi.jpeg"
+                alt="Erika Lotero neuropsicología"
+                class="hero-image"
+                width="1197"
+                height="1600"
+                loading="lazy"
+              />
+            </div>
+            <div class="hero-image-accent"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Por que elegir este proceso</h2>
+          <p class="section-subtitle">
+            Combinamos evaluación rigurosa con acompañamiento claro para que
+            puedas tomar decisiones informadas.
+          </p>
+        </div>
+        <div class="grid grid-4">
+          <article class="card reveal">
+            <h3 class="card-title">+1000</h3>
+            <p class="card-description">Pacientes atendidos</p>
+          </article>
+          <article class="card reveal stagger-1">
+            <h3 class="card-title">19 años</h3>
+            <p class="card-description">Experiencia clínica</p>
+          </article>
+          <article class="card reveal stagger-2">
+            <h3 class="card-title">3 áreas</h3>
+            <p class="card-description">Servicios principales</p>
+          </article>
+          <article class="card reveal stagger-3">
+            <h3 class="card-title">100%</h3>
+            <p class="card-description">Informes con validez profesional</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <main class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Servicios disponibles</h2>
+          <p class="section-subtitle">
+            Cada proceso se adapta a la edad, contexto y objetivos del paciente.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card service-detail-card reveal">
+            <span class="service-pill">Evaluación prioritaria</span>
+            <h3 class="card-title">Evaluación Neuropsicologica</h3>
+            <p class="card-description">
+              Proceso integral para comprender funciones cognitivas,
+              aprendizaje, atención, memoria y lenguaje.
+            </p>
+            <ul class="service-list">
+              <li>Entrevista inicial e historia clínica</li>
+              <li>Aplicación de pruebas estandarizadas</li>
+              <li>Informe detallado con hallazgos</li>
+              <li>Plan de intervención y seguimiento</li>
+            </ul>
+            <a
+              href="evaluacion-neuropsicologica.html"
+              class="btn btn-secondary btn-sm"
+              >Ver detalle</a
+            >
+          </article>
+
+          <article class="card service-detail-card reveal stagger-1">
+            <span class="service-pill">Intervencion temprana</span>
+            <h3 class="card-title">Diagnóstico de Autismo</h3>
+            <p class="card-description">
+              Evaluación especializada del espectro autista con observación
+              clínica y herramientas validadas.
+            </p>
+            <ul class="service-list">
+              <li>Entrevista y contexto familiar</li>
+              <li>Escalas e instrumentos de evaluación</li>
+              <li>Informe diagnóstico estructurado</li>
+              <li>Orientación para padres y cuidadores</li>
+            </ul>
+            <a href="diagnostico-autismo.html" class="btn btn-secondary btn-sm"
+              >Ver detalle</a
+            >
+          </article>
+
+          <article class="card service-detail-card reveal stagger-2">
+            <span class="service-pill">Cupos por cohorte</span>
+            <h3 class="card-title">Crianza Positiva</h3>
+            <p class="card-description">
+              Formación práctica para fortalecer vínculos, límites y comunicación
+              efectiva en casa.
+            </p>
+            <ul class="service-list">
+              <li>Talleres para familias</li>
+              <li>Asesoría individual familiar</li>
+              <li>Estrategias para conductas desafiantes</li>
+              <li>Herramientas aplicables en rutina diaria</li>
+            </ul>
+            <a href="crianza-positiva.html" class="btn btn-secondary btn-sm"
+              >Ver detalle</a
+            >
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <section class="section section-alt" id="contacto">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Siguiente paso</h2>
+          <p class="section-subtitle">
+            Elige la opción que mejor se ajuste a tu momento.
+          </p>
+        </div>
+        <div class="grid grid-2">
+          <article class="card reveal">
+            <h3 class="card-title">Agendar por WhatsApp</h3>
+            <p class="card-description">
+              Recibe orientación inicial y define el servicio mas adecuado.
+            </p>
+            <a
+              href="https://wa.me/573003793080"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Escribir ahora</a
+            >
+          </article>
+          <article class="card reveal stagger-1">
+            <h3 class="card-title">Solicitar guía gratuita</h3>
+            <p class="card-description">
+              Descarga una guía de señales de alerta en el desarrollo infantil.
+            </p>
+            <a
+              href="assets/guia-desarrollo.pdf"
+              class="btn btn-secondary"
+              download
+              >Descargar PDF</a
+            >
+          </article>
+          <article class="card reveal stagger-2">
+            <h3 class="card-title">Consulta por email</h3>
+            <p class="card-description">
+              Si prefieres, envía tu caso y te respondemos por correo.
+            </p>
+            <a
+              href="mailto:neuropsicologíaycrianza@gmail.com"
+              class="btn btn-secondary"
+              >Enviar email</a
+            >
+          </article>
+          <article class="card reveal stagger-3">
+            <h3 class="card-title">Cobertura por ubicación</h3>
+            <p class="card-description">
+              Revisa sectores desde donde puedes visitarnos en Medellín y el Valle de Aburrá.
+            </p>
+            <a href="ubicaciones/index.html" class="btn btn-secondary"
+              >Ver ubicaciones</a
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container container-narrow">
+        <div class="section-header reveal">
+          <h2 class="section-title">Preguntas frecuentes</h2>
+          <p class="section-subtitle">
+            Respuestas claras para ayudarte a iniciar.
+          </p>
+        </div>
+
+        <div class="accordion reveal">
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span
+                >¿Cuánto tarda una evaluación neuropsicológica completa?</span
+              >
+              <svg
+                class="accordion-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+            </button>
+            <div class="accordion-content" aria-hidden="true">
+              <p>
+                Generalmente entre 5 y 6 citas segun edad y areas a evaluar, mas
+                una sesion de devolución con informe y recomendaciones.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>¿A que edad puede evaluarse sospecha de autismo?</span>
+              <svg
+                class="accordion-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+            </button>
+            <div class="accordion-content" aria-hidden="true">
+              <p>
+                Puede iniciarse desde edades tempranas cuando hay senales de
+                alerta. La intervención oportuna mejora resultados de desarrollo
+                y adaptacion.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span
+                >¿Los informes tienen validez para procesos escolares o
+                clínicos?</span
+              >
+              <svg
+                class="accordion-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+            </button>
+            <div class="accordion-content" aria-hidden="true">
+              <p>
+                Si, se realizan con instrumentos estandarizados y criterio
+                profesional, útiles para orientación escolar, clínica y toma de
+                decisiones familiares.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>¿Qué debo llevar a la primera cita?</span>
+              <svg
+                class="accordion-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+            </button>
+            <div class="accordion-content" aria-hidden="true">
+              <p>
+                Historial médico relevante, reportes escolares previos y dudas
+                concretas del proceso. En menores, asiste al menos un acudiente
+                principal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img
+              src="assets/images/logo-iso-sin-fondo.png"
+              alt="Erika Lotero Neuropsicología"
+              class="footer-logo"
+              width="512"
+              height="512"
+              loading="lazy"
+            />
+            <p>
+              Neuropsicología clínica y crianza positiva con enfoque humano,
+              técnico y cercano para tu familia.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="blog.html">Blog</a>
+            <a href="ubicaciones/index.html">Ubicaciones</a>
+          </div>
+
+          <div class="footer-social">
+            <a
+              href="https://www.instagram.com/disciplinapositiva_erikalotero"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2.2c3.2 0 3.6 0 4.8.1 3 .1 4.4 1.6 4.6 4.6.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3-1.6 4.4-4.6 4.6-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3-.1-4.4-1.6-4.6-4.6-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-3 1.6-4.4 4.6-4.6 1.2-.1 1.6-.1 4.8-.1zm0 1.8c-3.2 0-3.5 0-4.7.1-2 .1-2.8.9-2.9 2.9-.1 1.2-.1 1.5-.1 4.7s0 3.5.1 4.7c.1 2 .9 2.8 2.9 2.9 1.2.1 1.5.1 4.7.1s3.5 0 4.7-.1c2-.1 2.8-.9 2.9-2.9.1-1.2.1-1.5.1-4.7s0-3.5-.1-4.7c-.1-2-.9-2.8-2.9-2.9-1.2-.1-1.5-.1-4.7-.1zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 1.8a3.1 3.1 0 100 6.2 3.1 3.1 0 000-6.2zm6.2-2.2a1.1 1.1 0 110 2.2 1.1 1.1 0 010-2.2z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://wa.me/573003793080"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 <strong>Erika Lotero Neuro</strong>. Todos los derechos
+            reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menúBtn = document.querySelector(".mobile-menú-btn");
+        const navLinks = document.querySelector(".nav-links");
+        const overlay = document.querySelector(".mobile-nav-overlay");
+        const navbar = document.getElementById("navbar");
+
+        if (menúBtn && navLinks && overlay) {
+          menúBtn.addEventListener("click", function () {
+            const isExpanded = menúBtn.getAttribute("aria-expanded") === "true";
+            menúBtn.setAttribute("aria-expanded", String(!isExpanded));
+            navLinks.classList.toggle("active");
+            overlay.classList.toggle("active");
+            document.body.style.overflow = isExpanded ? "" : "hidden";
+          });
+
+          overlay.addEventListener("click", function () {
+            menúBtn.setAttribute("aria-expanded", "false");
+            navLinks.classList.remove("active");
+            overlay.classList.remove("active");
+            document.body.style.overflow = "";
+          });
+
+          document.querySelectorAll(".nav-links a").forEach(function (link) {
+            link.addEventListener("click", function () {
+              menúBtn.setAttribute("aria-expanded", "false");
+              navLinks.classList.remove("active");
+              overlay.classList.remove("active");
+              document.body.style.overflow = "";
+            });
+          });
+        }
+
+        if (navbar) {
+          window.addEventListener("scroll", function () {
+            if (window.scrollY > 50) {
+              navbar.classList.add("nav-scrolled");
+            } else {
+              navbar.classList.remove("nav-scrolled");
+            }
+          });
+        }
+
+        document
+          .querySelectorAll(".accordion-trigger")
+          .forEach(function (trigger) {
+            trigger.addEventListener("click", function () {
+              const isExpanded =
+                trigger.getAttribute("aria-expanded") === "true";
+              document
+                .querySelectorAll(".accordion-trigger")
+                .forEach(function (btn) {
+                  btn.setAttribute("aria-expanded", "false");
+                  if (btn.nextElementSibling) {
+                    btn.nextElementSibling.setAttribute("aria-hidden", "true");
+                  }
+                });
+
+              if (!isExpanded) {
+                trigger.setAttribute("aria-expanded", "true");
+                if (trigger.nextElementSibling) {
+                  trigger.nextElementSibling.setAttribute(
+                    "aria-hidden",
+                    "false",
+                  );
+                }
+              }
+            });
+          });
+
+        const revealElements = document.querySelectorAll(".reveal");
+        if (revealElements.length > 0 && "IntersectionObserver" in window) {
+          const revealObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                }
+              });
+            },
+            { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+          );
+
+          revealElements.forEach(function (el) {
+            revealObserver.observe(el);
+          });
+        }
+      });
+    </script>
+  </body>
 </html>

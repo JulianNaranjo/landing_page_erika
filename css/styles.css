@@ -1115,3 +1115,114 @@
   color: white;
   transform: translateX(4px);
 }
+
+/* =====================================================
+   TEST TDAH BANNER SECTION
+   ===================================================== */
+.test-banner-section {
+  padding: var(--space-8) 0;
+  background: linear-gradient(135deg, var(--color-warm-lighter) 0%, #fef3c7 50%, var(--color-warm-lighter) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.test-banner-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse 60% 40% at 10% 50%, rgba(212, 163, 115, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 30% at 90% 50%, rgba(45, 106, 79, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.test-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8) var(--space-10);
+  background: var(--surface-1);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid rgba(212, 163, 115, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.test-banner-icon {
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, var(--color-warm) 0%, var(--color-warm-light) 100%);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-md);
+}
+
+.test-banner-icon svg {
+  width: 36px;
+  height: 36px;
+  color: white;
+}
+
+.test-banner-content {
+  flex: 1;
+}
+
+.test-banner-content h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.test-banner-content p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: var(--leading-relaxed);
+}
+
+.test-banner .btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Test Banner Responsive */
+@media (max-width: 768px) {
+  .test-banner-section {
+    padding: var(--space-6) 0;
+  }
+  
+  .test-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-6);
+    gap: var(--space-6);
+  }
+  
+  .test-banner-icon {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .test-banner-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .test-banner-content h2 {
+    font-size: var(--text-xl);
+  }
+  
+  .test-banner .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

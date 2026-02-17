@@ -1226,3 +1226,411 @@
     justify-content: center;
   }
 }
+
+/* =====================================================
+   14. TIENDA PAGE - Book/Ebook Styles
+   ===================================================== */
+
+/* Book Hero Section */
+.book-hero {
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #e9d5ff 100%);
+  min-height: auto;
+  padding: calc(72px + var(--space-16)) 0 var(--space-16);
+}
+
+.book-hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-12);
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.book-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  order: 1;
+}
+
+.book-image-frame {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+}
+
+.book-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: 
+    0 25px 50px -12px rgba(147, 51, 234, 0.25),
+    0 0 0 1px rgba(147, 51, 234, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-image:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 35px 60px -12px rgba(147, 51, 234, 0.3),
+    0 0 0 1px rgba(147, 51, 234, 0.15);
+}
+
+.book-image-accent {
+  position: absolute;
+  inset: -20px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.1));
+  border-radius: var(--radius-2xl);
+  z-index: -1;
+  filter: blur(40px);
+}
+
+.book-hero-text {
+  max-width: 600px;
+  order: 2;
+}
+
+.book-hero-text h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+  background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.book-subtitle {
+  font-size: var(--text-xl);
+  color: #7c3aed;
+  font-weight: var(--font-medium);
+  margin-bottom: var(--space-4);
+}
+
+.book-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.book-author {
+  font-weight: var(--font-medium);
+}
+
+.book-format {
+  background: rgba(168, 85, 247, 0.1);
+  color: #7c3aed;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+}
+
+/* Card Icons */
+.card-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  color: #7c3aed;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1.5;
+}
+
+.card:hover .card-icon {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px -8px rgba(147, 51, 234, 0.3);
+}
+
+/* Author Grid */
+.author-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.author-image {
+  position: relative;
+}
+
+.author-image .hero-image-frame {
+  max-width: 100%;
+}
+
+.author-image .hero-image {
+  border-radius: var(--radius-2xl);
+}
+
+.author-content h3 {
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.author-credentials {
+  font-size: var(--text-lg);
+  color: #7c3aed;
+  margin-bottom: var(--space-6);
+}
+
+.author-content p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+  line-height: var(--leading-relaxed);
+}
+
+.author-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-light);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: #7c3aed;
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.stat-label {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+/* Benefits Section */
+.benefits-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+}
+
+.benefit-item:last-child {
+  border-bottom: none;
+}
+
+.benefit-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  color: #22c55e;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+}
+
+.cta-card {
+  background: white;
+  border-radius: var(--radius-2xl);
+  padding: var(--space-12);
+  box-shadow: var(--shadow-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cta-content {
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: var(--text-3xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.cta-description {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+}
+
+.cta-feature svg {
+  width: 20px;
+  height: 20px;
+  color: #22c55e;
+  flex-shrink: 0;
+}
+
+.cta-buttons {
+  margin-bottom: var(--space-4);
+}
+
+.cta-note {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+/* =====================================================
+   TIENDA PAGE - Responsive
+   ===================================================== */
+
+@media (max-width: 1024px) {
+  .book-hero-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    text-align: center;
+  }
+
+  .book-image-wrapper {
+    order: -1;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .book-hero-text {
+    margin: 0 auto;
+  }
+
+  .book-hero-text .hero-cta {
+    justify-content: center;
+  }
+
+  .book-meta {
+    justify-content: center;
+  }
+
+  .author-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .author-image {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .author-content {
+    text-align: center;
+  }
+
+  .author-stats {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-hero {
+    padding: calc(72px + var(--space-8)) 0 var(--space-8);
+  }
+
+  .book-image-frame {
+    max-width: 280px;
+  }
+
+  .book-hero-text h1 {
+    font-size: var(--text-2xl);
+  }
+
+  .book-subtitle {
+    font-size: var(--text-lg);
+  }
+
+  .card-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto var(--space-4);
+  }
+
+  .card-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .author-stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .stat-item {
+    padding: var(--space-3);
+    background: rgba(147, 51, 234, 0.05);
+    border-radius: var(--radius-lg);
+  }
+
+  .cta-card {
+    padding: var(--space-6);
+  }
+
+  .cta-content h2 {
+    font-size: var(--text-xl);
+  }
+
+  .cta-description {
+    font-size: var(--text-base);
+  }
+
+  .benefit-item {
+    font-size: var(--text-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .book-hero-text .hero-cta {
+    flex-direction: column;
+  }
+
+  .book-hero-text .hero-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .book-meta {
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: center;
+  }
+}

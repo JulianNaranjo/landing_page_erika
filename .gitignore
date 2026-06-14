@@ -1,2 +1,5 @@
 # Windows null device file
 nul
+
+# Tooling (skill registry cache)
+.atl/

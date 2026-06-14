@@ -857,3 +857,49 @@
   margin-bottom: var(--space-4);
   box-shadow: var(--shadow-md);
 }
+
+/* ============================================
+   Sticky CTA bar (mobile only)
+   Persistent "Agendar Cita" action for booking conversion.
+   Hidden on desktop, where the fixed navbar CTA is always visible.
+   ============================================ */
+.sticky-cta-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sticky-cta-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-fixed);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    padding-bottom: calc(var(--space-3) + env(safe-area-inset-bottom));
+    background: #ffffff;
+    border-top: 1px solid var(--border-light);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .sticky-cta-bar__text {
+    flex: 1;
+    min-width: 0;
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    line-height: 1.3;
+  }
+
+  .sticky-cta-bar .btn {
+    flex-shrink: 0;
+  }
+
+  /* Reserve space so the fixed bar never covers footer content. */
+  body {
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom));
+  }
+}

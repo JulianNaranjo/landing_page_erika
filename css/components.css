@@ -491,6 +491,20 @@
     display: flex;
   }
 
+  /* Keep the navbar opaque and above the sticky CTA bar while the menu is open.
+     backdrop-filter (added by .nav-scrolled on scroll) turns .nav into the
+     containing block for its fixed children, which shrank the full-screen
+     overlay to the 72px bar and let page content bleed through the open menu. */
+  .nav {
+    z-index: 1000;
+  }
+
+  .nav.nav-scrolled {
+    background: var(--bg-white) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
   .nav-links {
     position: fixed;
     top: 0;

@@ -491,6 +491,20 @@
     display: flex;
   }
 
+  /* Keep the navbar opaque and above the sticky CTA bar while the menu is open.
+     backdrop-filter (added by .nav-scrolled on scroll) turns .nav into the
+     containing block for its fixed children, which shrank the full-screen
+     overlay to the 72px bar and let page content bleed through the open menu. */
+  .nav {
+    z-index: 1000;
+  }
+
+  .nav.nav-scrolled {
+    background: var(--bg-white) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
   .nav-links {
     position: fixed;
     top: 0;
@@ -537,6 +551,33 @@
   .nav-links .nav-link,
   .nav-links .nav-cta {
     background: #ffffff !important;
+  }
+
+  /* Internacional dropdown: expand inline inside the mobile menu panel.
+     Touch devices have no :hover, so the submenu must be statically visible. */
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-dropdown-toggle {
+    pointer-events: none;
+    font-weight: var(--font-semibold);
+  }
+
+  .nav-dropdown-toggle::after {
+    display: none;
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: transparent;
+    min-width: 0;
+    padding: 0 0 0 var(--space-3);
+    z-index: auto;
   }
 }
 

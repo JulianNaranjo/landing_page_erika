@@ -103,10 +103,10 @@
         </a>
 
         <button
-          class="mobile-menú-btn"
+          class="mobile-menu-btn"
           aria-label="Abrir menú"
           aria-expanded="false"
-          aria-controls="nav-menú"
+          aria-controls="nav-menu"
         >
           <span></span>
           <span></span>
@@ -115,7 +115,7 @@
 
         <div class="mobile-nav-overlay" aria-hidden="true"></div>
 
-        <div class="nav-links" id="nav-menú">
+        <div class="nav-links" id="nav-menu">
           <a href="index.html" class="nav-link">Inicio</a>
           <a href="servicios.html" class="nav-link active" aria-current="page"
             >Servicios</a
@@ -646,22 +646,22 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const menúBtn = document.querySelector(".mobile-menú-btn");
+        const menuBtn = document.querySelector(".mobile-menu-btn");
         const navLinks = document.querySelector(".nav-links");
         const overlay = document.querySelector(".mobile-nav-overlay");
         const navbar = document.getElementById("navbar");
 
-        if (menúBtn && navLinks && overlay) {
-          menúBtn.addEventListener("click", function () {
-            const isExpanded = menúBtn.getAttribute("aria-expanded") === "true";
-            menúBtn.setAttribute("aria-expanded", String(!isExpanded));
+        if (menuBtn && navLinks && overlay) {
+          menuBtn.addEventListener("click", function () {
+            const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+            menuBtn.setAttribute("aria-expanded", String(!isExpanded));
             navLinks.classList.toggle("active");
             overlay.classList.toggle("active");
             document.body.style.overflow = isExpanded ? "" : "hidden";
           });
 
           overlay.addEventListener("click", function () {
-            menúBtn.setAttribute("aria-expanded", "false");
+            menuBtn.setAttribute("aria-expanded", "false");
             navLinks.classList.remove("active");
             overlay.classList.remove("active");
             document.body.style.overflow = "";
@@ -669,7 +669,7 @@
 
           document.querySelectorAll(".nav-links a").forEach(function (link) {
             link.addEventListener("click", function () {
-              menúBtn.setAttribute("aria-expanded", "false");
+              menuBtn.setAttribute("aria-expanded", "false");
               navLinks.classList.remove("active");
               overlay.classList.remove("active");
               document.body.style.overflow = "";

@@ -538,6 +538,33 @@
   .nav-links .nav-cta {
     background: #ffffff !important;
   }
+
+  /* Internacional dropdown: expand inline inside the mobile menu panel.
+     Touch devices have no :hover, so the submenu must be statically visible. */
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-dropdown-toggle {
+    pointer-events: none;
+    font-weight: var(--font-semibold);
+  }
+
+  .nav-dropdown-toggle::after {
+    display: none;
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: transparent;
+    min-width: 0;
+    padding: 0 0 0 var(--space-3);
+    z-index: auto;
+  }
 }
 
 /* Fix: Ensure mobile menu always has solid background when navbar is scrolled */

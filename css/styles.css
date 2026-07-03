@@ -71,6 +71,20 @@
   margin-bottom: var(--space-8);
 }
 
+.hero-modalidad {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  justify-content: center;
+}
+
+.hero-modalidad .badge {
+  font-size: var(--text-base);
+  padding: var(--space-2) var(--space-4);
+  gap: var(--space-2);
+}
+
 .hero-cta {
   display: flex;
   flex-wrap: wrap;

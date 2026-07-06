@@ -47,6 +47,8 @@
     <link rel="stylesheet" href="css/design-system.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/whatsapp-cro.css" />
+    <script defer src="js/whatsapp-cro.js"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
     <script type="application/ld+json">
@@ -151,7 +153,7 @@
     })(window,document,'script','dataLayer','GTM-N2FB4TKV');</script>
     <!-- End Google Tag Manager -->
   </head>
-  <body>
+  <body data-page="online">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2FB4TKV"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -204,10 +206,11 @@
           <a href="#contacto" class="nav-link">Contacto</a>
           <div class="nav-cta">
             <a
-              href="https://wa.me/573003793080"
+              href="https://wa.me/573003793080?text=Hola%2C%20quiero%20agendar%20una%20consulta."
               class="btn btn-primary btn-sm"
               target="_blank"
               rel="noopener noreferrer"
+              data-wa-cta="nav"
               >WhatsApp</a
             >
           </div>
@@ -238,10 +241,12 @@
             </p>
             <div class="hero-cta reveal stagger-3">
               <a
-                href="https://wa.me/573003793080"
+                href="https://wa.me/573003793080?text=Hola%2C%20quiero%20agendar%20una%20consulta%20online.%20Escribo%20desde%20fuera%20de%20Medell%C3%ADn."
                 class="btn btn-primary btn-lg"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-wa-cta="hero-primary"
+                data-wa-primary
                 >Agendar consulta online</a
               >
               <a href="#proceso" class="btn btn-secondary btn-lg"
@@ -705,10 +710,11 @@
               ti.
             </p>
             <a
-              href="https://wa.me/573003793080"
+              href="https://wa.me/573003793080?text=Hola%2C%20quiero%20orientaci%C3%B3n%20para%20mi%20consulta%20online."
               class="btn btn-primary"
               target="_blank"
               rel="noopener noreferrer"
+              data-wa-cta="contact-card"
               >Escribir ahora</a
             >
           </article>
@@ -767,10 +773,11 @@
               </svg>
             </a>
             <a
-              href="https://wa.me/573003793080"
+              href="https://wa.me/573003793080?text=Hola%2C%20quiero%20agendar%20una%20consulta."
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
+              data-wa-cta="footer"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
@@ -882,10 +889,11 @@
     <aside class="sticky-cta-bar" aria-label="Agendar cita">
       <span class="sticky-cta-bar__text">Recibe orientación online</span>
       <a
-        href="https://wa.me/573003793080"
+        href="https://wa.me/573003793080?text=Hola%2C%20quiero%20agendar%20mi%20consulta%20online%20lo%20antes%20posible."
         class="btn btn-primary btn-sm"
         target="_blank"
         rel="noopener noreferrer"
+        data-wa-cta="sticky-bar"
         >Agendar Cita</a
       >
     </aside>

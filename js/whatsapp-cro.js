@@ -114,20 +114,18 @@
   }
 
   /* Composes the final wa.me URL. Order: contextual text,
-     then qualifier answer label (if any), then "Ref: <id>"
-     (if a click id is present). Exactly one encodeURIComponent
-     pass over the joined text - never re-encodes an already
-     encoded fragment. */
+     then qualifier answer label (if any). The click id is still
+     captured and persisted for future conversion tracking, but is
+     intentionally NOT surfaced in the visible message text (keeps
+     the patient-facing copy clean under a maximize-clicks strategy).
+     Exactly one encodeURIComponent pass over the joined text -
+     never re-encodes an already encoded fragment. */
   function buildWhatsAppUrl(baseText, options) {
     options = options || {};
     var lines = [baseText];
 
     if (options.answerLabel) {
       lines.push(options.answerLabel);
-    }
-
-    if (options.clickId && options.clickId.id) {
-      lines.push("Ref: " + options.clickId.id);
     }
 
     var finalText = lines.join("\n");

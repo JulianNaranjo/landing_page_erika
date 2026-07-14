@@ -76,6 +76,15 @@
       ],
       skipLabel: "Prefiero escribir directo",
     },
+    "servicios-online": {
+      question: "¿Qué tipo de consulta virtual buscas?",
+      chips: [
+        { label: "Evaluación online" },
+        { label: "Psicoterapia online" },
+        { label: "Asesoría en crianza" },
+      ],
+      skipLabel: "Prefiero escribir directo",
+    },
   };
 
   var cachedClickId = null;

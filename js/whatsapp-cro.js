@@ -1,6 +1,7 @@
 /* =====================================================
    WHATSAPP CRO & ADS SIGNAL QUALITY
-   Shared module for index.html, servicios.html, online.html.
+   Shared module for index.html, servicios.html, online.html,
+   infantil.html, adultos.html.
 
    Responsibilities:
    - Capture gclid/wbraid/gbraid and persist across pages
@@ -54,6 +55,24 @@
       chips: [
         { label: "Evaluación online" },
         { label: "Psicoterapia online" },
+      ],
+      skipLabel: "Prefiero escribir directo",
+    },
+    infantil: {
+      question: "¿Qué necesitas para tu hijo/a?",
+      chips: [
+        { label: "Evaluación neuropsicológica" },
+        { label: "Dificultades escolares / atención" },
+        { label: "Diagnóstico de autismo (TEA)" },
+        { label: "Terapia infantil" },
+      ],
+      skipLabel: "Prefiero escribir directo",
+    },
+    adultos: {
+      question: "¿Qué buscas?",
+      chips: [
+        { label: "Evaluación de memoria / atención" },
+        { label: "Psicoterapia individual" },
       ],
       skipLabel: "Prefiero escribir directo",
     },

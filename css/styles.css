@@ -96,12 +96,37 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  font-size: var(--text-sm);
-  color: var(--text-muted);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-secondary);
 }
 
 .hero-note svg {
   color: var(--color-primary);
+}
+
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.hero-link:hover {
+  color: var(--color-primary-dark);
+}
+
+.hero-link svg {
+  transition: transform var(--transition-fast);
+}
+
+.hero-link:hover svg {
+  transform: translateX(2px);
 }
 
 /* Hero Image */

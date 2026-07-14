@@ -142,37 +142,7 @@
           />
         </a>
 
-        <button
-          class="mobile-menu-btn"
-          aria-label="Abrir menú"
-          aria-expanded="false"
-          aria-controls="nav-menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <div class="mobile-nav-overlay" aria-hidden="true"></div>
-
-        <div class="nav-links" id="nav-menu">
-          <a href="index.html" class="nav-link">Inicio</a>
-          <a href="servicios.html" class="nav-link">Servicios</a>
-          <div class="nav-dropdown">
-            <a href="#" class="nav-link nav-dropdown-toggle">Internacional</a>
-            <div class="nav-dropdown-menu">
-              <a href="online.html" class="nav-link">🌍 Online (Global)</a>
-              <a href="espana.html" class="nav-link">🇪🇸 España</a>
-              <a href="usa.html" class="nav-link">🇺🇸 Estados Unidos</a>
-              <a href="australia.html" class="nav-link">🇦🇺 Australia</a>
-            </div>
-          </div>
-          <a href="blog.html" class="nav-link">Blog</a>
-          <a href="tienda.html" class="nav-link">Tienda</a>
-          <a href="test-tdah.html" class="nav-link">Test TDAH</a>
-          <a href="index.html#sobre" class="nav-link">Sobre mí</a>
-          <a href="index.html#contacto" class="nav-link">Contacto</a>
-          <div class="nav-cta">
+        <div class="nav-cta">
             <a
               href="https://wa.me/573003793080?text=Hola%2C%20quiero%20agendar%20una%20consulta."
               class="btn btn-primary btn-sm"
@@ -196,7 +166,6 @@
               </svg>
               <span>WhatsApp</span>
             </a>
-          </div>
         </div>
       </div>
     </nav>
@@ -700,44 +669,46 @@
 
     <!-- Scripts -->
     <script>
-      // Mobile menu toggle
+      // Mobile menu toggle (only present on pages that ship the full nav)
       const menuBtn = document.querySelector(".mobile-menu-btn");
       const navLinks = document.querySelector(".nav-links");
       const overlay = document.querySelector(".mobile-nav-overlay");
       const navbar = document.getElementById("navbar");
 
-      function openMenu() {
-        navbar.classList.add("menu-open");
-        setTimeout(() => {
-          menuBtn.setAttribute("aria-expanded", "true");
-          navLinks.classList.add("active");
-          overlay.classList.add("active");
-          document.body.style.overflow = "hidden";
-        }, 50);
+      if (menuBtn && navLinks && overlay) {
+        const openMenu = () => {
+          navbar.classList.add("menu-open");
+          setTimeout(() => {
+            menuBtn.setAttribute("aria-expanded", "true");
+            navLinks.classList.add("active");
+            overlay.classList.add("active");
+            document.body.style.overflow = "hidden";
+          }, 50);
+        };
+
+        const closeMenu = () => {
+          menuBtn.setAttribute("aria-expanded", "false");
+          navLinks.classList.remove("active");
+          overlay.classList.remove("active");
+          document.body.style.overflow = "";
+          navbar.classList.remove("menu-open");
+        };
+
+        menuBtn.addEventListener("click", () => {
+          const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+          if (isExpanded) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        overlay.addEventListener("click", closeMenu);
+
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
       }
-
-      function closeMenu() {
-        menuBtn.setAttribute("aria-expanded", "false");
-        navLinks.classList.remove("active");
-        overlay.classList.remove("active");
-        document.body.style.overflow = "";
-        navbar.classList.remove("menu-open");
-      }
-
-      menuBtn.addEventListener("click", () => {
-        const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
-        if (isExpanded) {
-          closeMenu();
-        } else {
-          openMenu();
-        }
-      });
-
-      overlay.addEventListener("click", closeMenu);
-
-      document.querySelectorAll(".nav-links a").forEach((link) => {
-        link.addEventListener("click", closeMenu);
-      });
 
       window.addEventListener("scroll", () => {
         if (window.scrollY > 50) {

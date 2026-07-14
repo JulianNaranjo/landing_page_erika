@@ -73,6 +73,7 @@
       chips: [
         { label: "Evaluación de memoria / atención" },
         { label: "Psicoterapia individual" },
+        { label: "Terapia de pareja" },
       ],
       skipLabel: "Prefiero escribir directo",
     },

@@ -1,13 +1,15 @@
 /* =====================================================
    WHATSAPP CRO & ADS SIGNAL QUALITY
    Shared module for index.html, servicios.html, online.html,
-   infantil.html, adultos.html.
+   infantil.html, adultos.html, servicios-online.html.
 
    Responsibilities:
    - Capture gclid/wbraid/gbraid and persist across pages
      (sessionStorage) for offline conversion import.
-   - Enrich every [data-wa-cta] href with a discreet
-     "Ref: <id>" line, on load (covers middle-click / new tab).
+   - Normalize every [data-wa-cta] href on load so the contextual
+     text is encoded consistently. The click id is captured for
+     conversion tracking only and is NEVER added to the visible
+     WhatsApp message text.
    - Run the qualifying micro-step dialog for [data-wa-primary]
      CTAs (hero only) and push the `whatsapp_qualified_intent`
      dataLayer event before opening WhatsApp.
@@ -27,7 +29,7 @@
   var CLICK_ID_PARAM_PRIORITY = ["gclid", "wbraid", "gbraid"];
 
   /* Generic fallback copy for the injected FAB (same text used
-     by the nav/footer CTAs across all 3 pages). */
+     by the nav/footer CTAs across all pages). */
   var FAB_BASE_TEXT = "Hola, quiero agendar una consulta.";
 
   /* Qualifying micro-step config, one entry per page slug.
@@ -96,7 +98,7 @@
   /* -----------------------------------------------------
      Click id capture (gclid > wbraid > gbraid), memoized
      and persisted to sessionStorage so it survives internal
-     navigation between the 3 pages (index -> servicios -> online).
+     navigation between the site's pages.
      ----------------------------------------------------- */
   function getClickId() {
     if (cachedClickId) return cachedClickId;
@@ -166,14 +168,13 @@
   }
 
   /* -----------------------------------------------------
-     Hydration: rewrite every [data-wa-cta] href to append
-     the Ref line. Runs at DOMContentLoaded, before the
-     delegated click listener is attached, so even
-     middle-click / "open in new tab" / "copy link" carry
-     the click id. Also caches the raw (pre-Ref) contextual
+     Hydration: normalize every [data-wa-cta] href at
+     DOMContentLoaded (decode the existing contextual text and
+     re-encode it consistently). Also caches the raw contextual
      text on each element so the qualifying dialog can later
-     recompose it (text + answer + Ref) without double-adding
-     the Ref line already baked into the hydrated href.
+     recompose it (contextual text + selected answer). The click
+     id is captured for tracking only and is never written into
+     the visible message text.
      ----------------------------------------------------- */
   function hydrateStaticCtas(clickId) {
     var ctas = document.querySelectorAll("[data-wa-cta]");
@@ -278,7 +279,7 @@
   }
 
   /* Skip/direct path: redirect immediately with base contextual
-     text (+ Ref if present). MUST NOT fire the dataLayer event. */
+     text. MUST NOT fire the dataLayer event. */
   function onSkip() {
     if (!activeCta) return;
     var baseText = getActiveCtaBaseText();
@@ -292,7 +293,7 @@
 
   /* Qualified path: push the dataLayer event synchronously
      BEFORE opening WhatsApp, then redirect with contextual
-     text + selected answer + Ref (if present). */
+     text + selected answer. */
   function onQualified(answerLabel) {
     if (!activeCta) return;
     var cta = activeCta;
